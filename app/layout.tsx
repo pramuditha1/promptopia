@@ -1,4 +1,5 @@
 import Nav from "@components/Nav"
+import Provider from "@components/Provider"
 import "@styles/globals.css"
 import { ReactNode } from "react"
 
@@ -15,6 +16,7 @@ const RootLayout = ({children}: RootLayoutProps) => {
   return (
     <html lang='en'>
         <body>
+            <Provider>
             <div className='main'>
                 <div className='gradient'></div>
             </div>
@@ -22,6 +24,7 @@ const RootLayout = ({children}: RootLayoutProps) => {
                 <Nav/>
                 {children}
             </main>
+            </Provider>
         </body>
     </html>
   )
